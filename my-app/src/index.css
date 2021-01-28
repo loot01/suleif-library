@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+}
+
+@layer components {
+  .book-container {
+    @apply py-8 bg-gray-300 min-h-full rounded;
+  }
+  .book-container h1 {
+    @apply my-2;
+  }
+  .btn {
+    @apply border-none bg-blue-600 rounded px-2 py-1 mx-2 focus:outline-none focus:ring ring-gray-600 ring-offset-current my-1;
+  }
+  .btn-success {
+    @apply bg-green-600 hover:bg-green-700 transition-colors;
+  }
+  .btn-alert {
+    @apply bg-red-500 hover:bg-red-600 transition-colors;
+  }
+  .btn-warning {
+    @apply bg-yellow-500 hover:bg-yellow-600 transition-colors;
+  }
+  .btn-add-book {
+    @apply text-xl rounded-full border-none bg-blue-700 h-8 w-8 flex items-center justify-center text-gray-300 fixed bottom-2 right-2 focus:outline-none focus:ring ring-gray-600 ring-offset-0 ring-offset-gray-600 hover:bg-blue-800 transition-colors sm:text-2xl sm:h-10 sm:w-10;
+  }
+  form input {
+    @apply rounded focus:ring-blue-500 focus:ring-4 focus:outline-none my-2 p-2 text-center;
+  }
+  form input[type="checkbox"] {
+    @apply ring-0;
+  }
+  .popup-form-wrapper {
+    @apply absolute h-full w-full flex items-center justify-center bg-opacity-50 bg-gray-700;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    min-width: 300px;
+    transform: translate(-50%, -50%);
+  }
+}
+.hidden {
+  display: none;
+}
+.hidden {
+  display: none;
+}

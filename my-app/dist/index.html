@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-snowpack-app"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <title>Snowpack & Tailwind App</title>
+  </head>
+  <body class="min-h-full bg-gray-500">
+    <div class="bg-gray-700 py-1">
+      <h1 class="text-2xl text-center text-gray-200">My library</h1>
+    </div>
+
+    <div
+      class="grid m-2 my-4 gap-2 text-center grid-cols-1 static sm:grid-cols-2 md:grid-cols-3"
+      id="book-grid"
+    ></div>
+
+    <div class="hidden popup-form-wrapper" id="form-add-wrapper">
+      <form
+        class="bg-gray-400 text-center add-form p-4 w-2/4 m-auto rounded"
+        id="add-book"
+      >
+        <h2 class="font-semibold text-xl mb-2">Add Book</h2>
+        <div class="flex justify-items-center flex-col">
+          <input
+            class="form-input"
+            type="text"
+            name="name"
+            placeholder="Book name"
+            required
+          />
+          <input type="text" name="author" placeholder="Author" required />
+          <input
+            type="number"
+            name="pages"
+            placeholder="Number of pages"
+            required
+          />
+          <div class="mb-1">
+            <label for="add_read">Read?</label>
+            <input type="checkbox" name="add-read" id="add-read" />
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-success font-semibold text-lg mt-2 p-2 text-gray-200"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="hidden popup-form-wrapper" id="form-edit-wrapper">
+      <form
+        class="bg-gray-400 text-center add-form p-4 w-2/4 m-auto rounded"
+        id="edit-book"
+      >
+        <h2 class="font-semibold text-xl mb-2">Edit Book</h2>
+        <div class="flex justify-items-center flex-col">
+          <input
+            class="form-input"
+            type="text"
+            name="name"
+            placeholder="Book name"
+          />
+          <input type="text" name="author" placeholder="Author" />
+          <input
+            type="number"
+            name="pages"
+            placeholder="Number of pages"
+            required
+          />
+          <div class="mb-1">
+            <label for="edit-read">Read?</label>
+            <input type="checkbox" name="edit-read" id="edit-read" />
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-success font-semibold text-lg mt-2 p-2 text-gray-200"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <button class="btn-add-book">+</button>
+    <script src="./_dist_/app.js"></script>
+  </body>
+</html>
