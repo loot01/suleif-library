@@ -136,6 +136,3 @@ window.onclick = (e) => {
     editBookFormWrapper.classList.toggle("hidden");
   }
 };
-
-library.push(book("John's odyssey", "JK Lowirn", 200, true));
-addBookToGrid(library[0]);
